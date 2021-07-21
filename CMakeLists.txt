@@ -7,3 +7,6 @@ add_executable(Components_Adjacency_list Components/Adjacency_list/Adjacency_lis
 add_executable(Components_Adjacency_matrix Components/Adjacency_matrix/Adjacency_matrix.cpp)
 add_executable(Components_Ribs_list Components/Ribs_list/Ribs_list.cpp)
 add_executable(AM_to_AL Translation/AM_to_AL/AM_to_AL.cpp)
+add_executable(Tops_Adjacency_list Articulation_tops/Adjacency_list/Adjacency_list.cpp)
+add_executable(Tops_Adjacency_matrix Articulation_tops/Adjacency_matrix/Adjacency_matrix.cpp)
+add_executable(Tops_Ribs_list Articulation_tops/Ribs_list/Ribs_list.cpp)
