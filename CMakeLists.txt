@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.19)
+project(Articulation_points_and_bridges)
+
+set(CMAKE_CXX_STANDARD 17)
+
+add_executable(Components_Adjacency_list Components/Adjacency_list/Adjacency_list.cpp)
+add_executable(Components_Adjacency_matrix Components/Adjacency_matrix/Adjacency_matrix.cpp)
+add_executable(Components_Ribs_list Components/Ribs_list/Ribs_list.cpp)
+add_executable(AM_to_AL Translation/AM_to_AL/AM_to_AL.cpp)
