@@ -10,7 +10,7 @@ struct Rib {
 };
 
 
-int M, N, time = 1;
+int M, N, order = 1;
 vector<vector<int>> tops;
 vector<int> Num;
 vector<int> Low;
@@ -22,9 +22,9 @@ auto comp = [](Rib a, Rib b) {
 set<Rib, decltype(comp)> output(comp);
 
 void dfs(int top, int parent) {
-    Num[top] = time;
+    Num[top] = order;
     Low[top] = Num[top];
-    time++;
+    order++;
     for (auto ending : tops[top]) {
         if (ending == parent) continue;
         if (Num[ending] == 0) {

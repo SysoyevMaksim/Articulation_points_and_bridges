@@ -10,7 +10,7 @@ struct Rib {
     int start, finish;
 };
 
-int M, N, time = 1;
+int M, N, order = 1;
 vector<vector<int>> tops;
 vector<int> Num;
 vector<int> Low;
@@ -28,9 +28,9 @@ void print_stack(int top) {
 }
 
 void dfs(int top, int parent) {
-    Num[top] = time;
+    Num[top] = order;
     Low[top] = Num[top];
-    time++;
+    order++;
     for (auto ending : tops[top]) {
         if (Num[ending] == 0) {
             output.push({top, ending});

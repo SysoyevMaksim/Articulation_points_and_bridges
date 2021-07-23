@@ -9,7 +9,7 @@ struct Rib {
     int start, finish;
 };
 
-int M, N, time = 1;
+int M, N, order = 1;
 vector<Rib> ribs;
 vector<int> Num;
 vector<int> Low;
@@ -38,9 +38,9 @@ void print_stack(int top) {
 }
 
 void dfs(int top, int parent) {
-    Num[top] = time;
+    Num[top] = order;
     Low[top] = Num[top];
-    time++;
+    order++;
     auto begin = lower_bound(ribs.begin(), ribs.end(), Rib{top, 0}, by_start),
             end = upper_bound(ribs.begin(), ribs.end(), Rib{top, 0}, by_start);
     for (auto way = begin; way != end; way++) {

@@ -9,7 +9,7 @@ struct Rib {
     int start, finish;
 };
 
-int N, M = 0, time = 1;
+int N, M = 0, order = 1;
 vector<vector<int>> matrix;
 vector<int> Num;
 vector<int> Low;
@@ -17,9 +17,9 @@ Rib input;
 set<int> output;
 
 void dfs(int top, int parent) {
-    Num[top] = time;
+    Num[top] = order;
     Low[top] = Num[top];
-    time++;
+    order++;
     int children = 0;
     for (int ending = 0; ending < N; ending++) {
         if (matrix[top][ending] == 1) {
