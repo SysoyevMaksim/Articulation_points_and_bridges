@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include <algorithm>
 #include <stack>
@@ -17,10 +18,10 @@ stack<Rib> output;
 Rib input;
 
 void print_stack(int top) {
-    cout << "------------" << endl;
+//    cout << "------------" << endl;
     while (!output.empty()) {
         Rib data = output.top();
-        cout << data.start + 1 << " : " << data.finish + 1 << endl;
+//        cout << data.start + 1 << " : " << data.finish + 1 << endl;
         output.pop();
         if (data.start == top) return;
     }
@@ -51,11 +52,12 @@ void dfs(int top, int parent) {
 }
 
 int main() {
-    cin >> N;
+    ifstream fin ("input.txt");
+    fin >> N;
     matrix.resize(N, vector<int>(N));
     for (int i = 0; i < N; ++i) {
         for (int j = 0; j < N; ++j) {
-            cin >> matrix[i][j];
+            fin >> matrix[i][j];
             if (matrix[i][j] == 1) {
                 M++;
             }

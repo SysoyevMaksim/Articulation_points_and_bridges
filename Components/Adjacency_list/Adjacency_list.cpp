@@ -1,8 +1,8 @@
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include <algorithm>
 #include <stack>
-#include <set>
 
 using namespace std;
 
@@ -18,10 +18,10 @@ stack<Rib> output;
 Rib input;
 
 void print_stack(int top) {
-    cout << "------------" << endl;
+//    cout << "------------" << endl;
     while (!output.empty()) {
         Rib data = output.top();
-        cout << data.start + 1 << " : " << data.finish + 1 << endl;
+//        cout << data.start + 1 << " : " << data.finish + 1 << endl;
         output.pop();
         if (data.start == top) return;
     }
@@ -49,12 +49,13 @@ void dfs(int top, int parent) {
 }
 
 int main() {
-    cin >> M >> N;
+    ifstream fin ("input.txt");
+    fin >> M >> N;
     tops.resize(M);
     Num.resize(M, 0);
     Low.resize(M, INT32_MAX);
     for (int i = 0; i < N; ++i) {
-        cin >> input.start >> input.finish;
+        fin >> input.start >> input.finish;
         input.start--;
         input.finish--;
         tops[input.start].push_back(input.finish);

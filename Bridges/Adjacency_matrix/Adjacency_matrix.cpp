@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include <algorithm>
 #include <set>
@@ -41,11 +42,12 @@ void dfs(int top, int parent) {
 }
 
 int main() {
-    cin >> N;
+    ifstream fin ("input.txt");
+    fin >> N;
     matrix.resize(N, vector<int>(N));
     for (int i = 0; i < N; ++i) {
         for (int j = 0; j < N; ++j) {
-            cin >> matrix[i][j];
+            fin >> matrix[i][j];
             if (matrix[i][j] == 1) {
                 M++;
             }
@@ -59,9 +61,9 @@ int main() {
             dfs(i, -1);
         }
     }
-    cout << output.size() << endl;
+//    cout << output.size() << endl;
     for (auto top : output) {
-        cout << top.start << " " << top.finish << endl;
+//        cout << top.start << " " << top.finish << endl;
     }
     return 0;
 }

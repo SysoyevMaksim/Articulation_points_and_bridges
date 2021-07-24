@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include <algorithm>
 #include <set>
@@ -53,12 +54,13 @@ void dfs(int top, int parent) {
 }
 
 int main() {
-    cin >> M >> N;
+    ifstream fin ("input.txt");
+    fin >> M >> N;
     ribs.resize(2 * N);
     Num.resize(M, 0);
     Low.resize(M, INT32_MAX);
     for (int i = 0; i < 2 * N; i += 2) {
-        cin >> input.start >> input.finish;
+        fin >> input.start >> input.finish;
         input.start--;
         input.finish--;
         ribs[i] = {input.start, input.finish};
@@ -70,9 +72,9 @@ int main() {
             dfs(i, -1);
         }
     }
-    cout << output.size() << endl;
+//    cout << output.size() << endl;
     for (auto top : output) {
-        cout << top.start << " " << top.finish << endl;
+//        cout << top.start << " " << top.finish << endl;
     }
     return 0;
 }
