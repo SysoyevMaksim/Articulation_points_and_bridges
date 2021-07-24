@@ -63,6 +63,10 @@ int main() {
     for (int i = 0; i < M; ++i) {
         sort(tops[i].begin(), tops[i].end());
     }
-    dfs(0, 0);
+    for (int i = 0; i < M; ++i) {
+        if (Num[i] == 0) {
+            dfs(i, -1);
+        }
+    }
     return 0;
 }

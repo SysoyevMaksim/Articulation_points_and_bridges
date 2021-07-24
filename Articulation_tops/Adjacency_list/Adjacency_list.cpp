@@ -26,7 +26,7 @@ void dfs(int top, int parent) {
             dfs(ending, top);
             Low[top] = min(Low[top], Low[ending]);
             if (Low[ending] == Num[top] && parent != -1) {
-                output.insert(top+1);
+                output.insert(top + 1);
             }
             ++children;
         } else {
@@ -34,7 +34,7 @@ void dfs(int top, int parent) {
         }
     }
     if (parent == -1 && children > 1) {
-        output.insert(top+1);
+        output.insert(top + 1);
     }
 }
 
@@ -53,7 +53,11 @@ int main() {
     for (int i = 0; i < M; ++i) {
         sort(tops[i].begin(), tops[i].end());
     }
-    dfs(0, -1);
+    for (int i = 0; i < M; ++i) {
+        if (Num[i] == 0) {
+            dfs(i, -1);
+        }
+    }
     cout << output.size() << endl;
     for (auto top : output) {
         cout << top << endl;
