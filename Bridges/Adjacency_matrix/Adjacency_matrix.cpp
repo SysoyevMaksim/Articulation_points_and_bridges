@@ -41,8 +41,8 @@ void dfs(int top, int parent) {
     }
 }
 
-int main() {
-    ifstream fin ("input.txt");
+int main(int argc, char **argv) {
+    ifstream fin (argv[1]);
     fin >> N;
     matrix.resize(N, vector<int>(N));
     for (int i = 0; i < N; ++i) {

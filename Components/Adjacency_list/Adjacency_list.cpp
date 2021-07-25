@@ -48,8 +48,8 @@ void dfs(int top, int parent) {
     }
 }
 
-int main() {
-    ifstream fin ("input.txt");
+int main(int argc, char **argv) {
+    ifstream fin (argv[1]);
     fin >> M >> N;
     tops.resize(M);
     Num.resize(M, 0);
