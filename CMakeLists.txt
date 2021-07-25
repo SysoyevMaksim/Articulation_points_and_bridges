@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.19)
 project(Articulation_points_and_bridges)
 
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -lpsapi")
 
 add_executable(Components_Adjacency_list Components/Adjacency_list/Adjacency_list.cpp)
 add_executable(Components_Adjacency_matrix Components/Adjacency_matrix/Adjacency_matrix.cpp)
