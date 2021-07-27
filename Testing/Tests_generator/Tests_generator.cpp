@@ -9,8 +9,8 @@ int main() {
     random_device rd;
     mt19937 mersenne(rd());
     vector<vector<int>> matrix;
-    for (int i = 0; i < 10; ++i) {
-        fout.open(R"(C:\Users\sysoy\Articulation points and bridges\Tests\AM_test_few)" + to_string(i+1) + ".txt");
+    for (int i = 0; i < 25; ++i) {
+        fout.open(R"(C:\Users\sysoy\Articulation_points_and_bridges\Tests\AM_test_few)" + to_string(i+1) + ".txt");
         unsigned int tops = 400 + mersenne() % 500;
         matrix.assign(tops, vector<int>(tops, 0));
         for (unsigned int x = 1; x < tops; ++x) {
@@ -29,8 +29,8 @@ int main() {
         }
         fout.close();
     }
-    for (int i = 0; i < 10; ++i) {
-        fout.open(R"(C:\Users\sysoy\Articulation points and bridges\Tests\AM_test_lot)" + to_string(i+1) + ".txt");
+    for (int i = 0; i < 25; ++i) {
+        fout.open(R"(C:\Users\sysoy\Articulation_points_and_bridges\Tests\AM_test_lot)" + to_string(i+1) + ".txt");
         unsigned int tops = 400 + mersenne() % 500;
         matrix.assign(tops, vector<int>(tops, 0));
         for (unsigned int x = 1; x < tops; ++x) {
@@ -49,8 +49,8 @@ int main() {
         }
         fout.close();
     }
-    for (int i = 0; i < 10; ++i) {
-        fout.open(R"(C:\Users\sysoy\Articulation points and bridges\Tests\AM_test_medium)" + to_string(i+1) + ".txt");
+    for (int i = 0; i < 25; ++i) {
+        fout.open(R"(C:\Users\sysoy\Articulation_points_and_bridges\Tests\AM_test_medium)" + to_string(i+1) + ".txt");
         unsigned int tops = 400 + mersenne() % 500;
         matrix.assign(tops, vector<int>(tops, 0));
         for (unsigned int x = 1; x < tops; ++x) {

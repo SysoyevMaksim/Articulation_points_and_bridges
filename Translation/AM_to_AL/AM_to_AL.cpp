@@ -5,10 +5,10 @@
 using namespace std;
 
 int main() {
-    for (int i = 0; i < 10; i++) {
-        ifstream fin(R"(C:\Users\sysoy\Articulation points and bridges\Tests\AM_test_few)"
+    for (int i = 0; i < 25; i++) {
+        ifstream fin(R"(C:\Users\sysoy\Articulation_points_and_bridges\Tests\AM_test_few)"
                      + to_string(i + 1) + ".txt");
-        ofstream fout(R"(C:\Users\sysoy\Articulation points and bridges\Tests\RL_test_few)"
+        ofstream fout(R"(C:\Users\sysoy\Articulation_points_and_bridges\Tests\RL_test_few)"
                       + to_string(i + 1) + ".txt");
         vector<vector<int>> tops;
         int N, el, counter = 0;
@@ -30,10 +30,10 @@ int main() {
             }
         }
     }
-    for (int i = 0; i < 10; i++) {
-        ifstream fin(R"(C:\Users\sysoy\Articulation points and bridges\Tests\AM_test_lot)"
+    for (int i = 0; i < 25; i++) {
+        ifstream fin(R"(C:\Users\sysoy\Articulation_points_and_bridges\Tests\AM_test_lot)"
                      + to_string(i + 1) + ".txt");
-        ofstream fout(R"(C:\Users\sysoy\Articulation points and bridges\Tests\RL_test_lot)"
+        ofstream fout(R"(C:\Users\sysoy\Articulation_points_and_bridges\Tests\RL_test_lot)"
                       + to_string(i + 1) + ".txt");
         vector<vector<int>> tops;
         int N, el, counter = 0;
@@ -55,10 +55,10 @@ int main() {
             }
         }
     }
-    for (int i = 0; i < 10; i++) {
-        ifstream fin(R"(C:\Users\sysoy\Articulation points and bridges\Tests\AM_test_medium)"
+    for (int i = 0; i < 25; i++) {
+        ifstream fin(R"(C:\Users\sysoy\Articulation_points_and_bridges\Tests\AM_test_medium)"
                      + to_string(i + 1) + ".txt");
-        ofstream fout(R"(C:\Users\sysoy\Articulation points and bridges\Tests\RL_test_medium)"
+        ofstream fout(R"(C:\Users\sysoy\Articulation_points_and_bridges\Tests\RL_test_medium)"
                       + to_string(i + 1) + ".txt");
         vector<vector<int>> tops;
         int N, el, counter = 0;
